@@ -1,6 +1,6 @@
 # AngularUIAuthentication
 
-Simple basic authentication app designed in flutter. App design is based on Login/Register Design designed by [Harnish Design](https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page)
+Simple basic authentication app designed in Angular 10. App design is based on Login/Register Design designed by [Harnish Design](https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page)
 
 ## Development server
 
