@@ -1,6 +1,6 @@
 # AngularUIAuthentication
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
+Simple basic authentication app designed in flutter. App design is based on Login/Register Design designed by [Harnish Design](https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page)
 
 ## Development server
 
