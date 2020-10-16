@@ -2,12 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AngularUIAuthentication</title>
-  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Authentication UI - Angular X Designed by Harnish Design</title>
+  <base href="/">
+  <link rel="icon" type="image/png" href="assets/img/logo-ENSEA.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" media="all">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+      }
+      100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+      }
+    }
+    .splash-screen {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      background-color: #fff;
+      background-color: #f2f3fa;
+      pointer-events: none;
+    }
+    .splash-screen .loading-spinner {
+      height: 50px;
+      width: 50px;
+      animation: rotate 2s linear infinite;
+      transform-origin: center center;
+    }
+    .splash-screen .loading-spinner .path {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+      stroke-width: 10%;
+      animation: dash 1s ease-in-out infinite;
+      animation-timing-function: cubic-bezier(.35,0,.25,1);
+      stroke-linecap: round;
+      stroke: #3498db;
+    }
+  </style>
 </head>
 <body>
+  <splash-screen class="splash-screen" id='splash-screen'>
+      <svg class="loading-spinner" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>
+  </splash-screen>
   <app-root></app-root>
 </body>
 </html>
