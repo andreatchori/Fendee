@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+// Boostrap styles
+@import '~bootstrap/dist/css/bootstrap.css';
+
+// Theme Core Styles (components, ...)
+@import '@theme/scss/core';
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+label {
+  font-weight: 500;
+}

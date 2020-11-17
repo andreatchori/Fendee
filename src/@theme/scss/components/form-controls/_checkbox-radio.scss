@@ -1,0 +1,121 @@
+// 
+// Checkboxes & Radio buttons
+//
+
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding-left: 30px;
+    font-weight: 400;
+    min-height: 18px;
+    span {
+        display: inline-block;
+        &::before {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            height: 18px;
+            width: 18px;
+            left: 0;
+            top: 1px;
+            border: 2px solid #bdc3c7;
+            transition: all .1s;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            width: 5px;
+            height: 10px;
+            left: 7px;
+            top: 4px;
+            border: solid #526477;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        &:checked {
+            & ~ span:after {
+                display: inline-block;
+            }
+        }
+        &:disabled ~ span {
+            opacity: .7;
+            cursor: not-allowed;
+        }
+    }
+    &:hover {
+        span::before {
+            border-color: #b8b8b8;
+        }
+    }
+    &.checkbox-grey, &.radio-grey {
+        span::before {
+            background-color: #E6E6E6;
+            border-color: #E6E6E6;
+        }
+    }
+    &.check-single {padding-left:18px}
+    &.checkbox-circle {
+        padding-left: 34px;
+        min-height: 22px;
+        span {
+            line-height: 22px;
+            &::before {
+                border-radius: 50% !important;
+                height: 22px;
+                width: 22px;
+            }
+            &::after {
+                left: 8px;
+                top: 6px;
+            }
+        }
+    }
+}
+.checkbox:not(.checkbox-square) {
+    span::before {
+        border-radius: 2px;
+    }
+}
+
+.radio {
+    span {
+        &::before {
+            border-radius: 50%;
+        }
+        &::after {
+            border: 0;
+            height: 6px;
+            left: 6px;
+            top: 7px;
+            width: 6px;
+            background: #526477;
+            border-radius: 100%;
+        }
+    }
+}
+.check-list {
+    .checkbox + .checkbox, .radio + .radio {margin-top:10px}
+}
+
+.checkbox-inline, .radio-inline {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+
+//
+// Alternate checkboxes and radio buttons
+//
+
+@each $color, $value in $checkboxes-colors {
+  @include checkbox-variant($color, $value);
+  @include checkbox-outline-variant($color, $value);
+}
+

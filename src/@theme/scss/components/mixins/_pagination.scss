@@ -1,0 +1,9 @@
+// Pagination
+
+@mixin pagination-size($height, $padding-x, $font-size) {
+  .page-link {
+    padding: 0 $padding-x;
+    height: $height;
+    font-size: $font-size;
+  }
+}

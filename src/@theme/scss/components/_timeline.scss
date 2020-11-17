@@ -1,0 +1,73 @@
+// 
+// Timeline lists
+//
+
+// 
+// Big Timeline
+//
+
+.timeline {
+	position: relative;
+    padding: 0;
+    list-style: none;
+    padding-left: 10px;
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 2px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 9px;
+        background-color: #ebedf2;
+    }
+    .timeline-item {
+        position: relative;
+        padding: 10px 15px 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &.timeline-default .timeline-item::before,
+    .timeline-item .timeline-point {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    //
+    &.timeline-default {
+        .timeline-item::before {
+            content: '';
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background-color: theme_color('primary');
+            border: 4px solid #e8efff;
+        }
+
+        // Outline points
+        &.outline-points {
+            &:before {
+                background-color: theme_color('primary');
+            }
+            .timeline-item::before {
+                background-color: #fff !important;
+                border: 1px solid theme_color('primary');
+            }
+        }
+
+        // Danger state colors 
+        &.timeline-danger {
+            .timeline-item::before {
+                background-color: theme_color('danger');
+            }
+            &.outline-points {
+                &:before { background-color: theme_color('danger'); }
+                .timeline-item::before { border-color: theme_color('danger'); }
+            }
+        }
+    }
+}

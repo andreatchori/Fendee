@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sign_in',
+  selector: 'app-sign-in',
   templateUrl: './sign_in.component.html',
-  styleUrls: ['./sign_in.component.css']
+  styleUrls: ['./sign_in.component.scss']
 })
-export class Sign_inComponent implements OnInit {
+export class SigninComponent implements OnInit {
   constructor() {}
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
   }
 

@@ -7,7 +7,7 @@ import { filter, take } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
-export class SplashScreenService 
+export class SplashScreenService
 {
 	private splashScreenEl: any;
 	public player: AnimationPlayer;
@@ -21,13 +21,12 @@ export class SplashScreenService
      * @author André ATCHORI
      * Initialize
     */
-	init(): void 
-	{
+	init(): void {
 		// Get the splash screen element
         this.splashScreenEl = this._document.body.querySelector('#splash-screen');
-		
+
 		// Hide it on the first NavigationEnd event
-        if ( this.splashScreenEl ) 
+        if (this.splashScreenEl)
         {
 			const routerEvents = this.router.events
                 .pipe(
@@ -62,7 +61,7 @@ export class SplashScreenService
      * @author André ATCHORI
      * Hide the splash screen
      */
-	hide(): void 
+	hide(): void
 	{
 		this.player = this.animationBuilder
 			.build([

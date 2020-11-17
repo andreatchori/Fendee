@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Sign_inComponent } from './sign_in/sign_in.component';
-import { Sign_upComponent } from './sign_up/sign_up.component';
+import { SignupComponent } from './sign_up/sign_up.component';
+import { SigninComponent } from './sign_in/sign_in.component';
 
 const routes = [
   {
     path: 'sign_in',
-    component: Sign_inComponent
+    component: SigninComponent
   },
   {
     path: 'sign_up',
-    component: Sign_upComponent
+    component: SignupComponent
   },
 ];
 

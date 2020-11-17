@@ -1,0 +1,101 @@
+<div class="ui-login-register">
+  <div class="container-fluid px-0">
+
+    <div class="row no-gutters min-vh-100">
+      <div class="col-md-6">
+        <div class="hero-wrap d-flex align-items-center h-100">
+          <div class="hero-mask opacity-7 bg-primary"></div>
+          <div class="hero-bg hero-bg-scroll"></div>
+          <div class="hero-content mx-auto w-100 h-100 d-flex flex-column">
+            <div class="row no-gutters">
+              <div class="col-10 col-lg-9 mx-auto">
+                <div class="logo mt-5 mb-5 mb-md-0">
+                  <a class="d-flex" title="logo">
+                    <h2 class="text-white">
+                      <img src="assets/images/logo-light.png" alt="Oxyy">
+                    </h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters my-auto">
+              <div class="col-10 col-lg-9 mx-auto">
+                <h1 class="text-11 text-white mb-4">
+                  Looks like you're new here!
+                </h1>
+                <p class="text-4 text-white line-height-4 mb-5">
+                  Join our group in few minutes! Sign up with your details to get started
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="container my-auto py-5">
+          <div class="row">
+            <div class="col-11 col-lg-9 col-xl-8 mx-auto">
+              <h3 class="font-weight-600 mb-4">Sign Up</h3>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="fullname">Fullname <span class="text-danger">*</span></label>
+                  <input type="text" formControlName="fullname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }"
+                   placeholder="Enter Your Name">
+                  <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+                    <div *ngIf="f.fullname.errors.required">Fullname is required</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="emailAddress">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                   placeholder="Enter Your Email">
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="registerPassword">Password <span class="text-danger">*</span></label>
+                  <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                   placeholder="Enter Password">
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password <span class="text-danger">*</span></label>
+                  <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
+                   placeholder="Enter confirm Password">
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.confirmPassword.errors.required">Confirm password is required</div>
+                    <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="custom-control custom-checkbox">
+                      <input name="acceptTerms" formControlName="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }"
+                      type="checkbox">
+                      <label for="accept-terms">
+                        &nbsp;
+                        Accept Terms & Conditions
+                      </label>
+                      <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-block my-4">Sign Up</button>
+              </form>
+              <p class="text-center text-muted mb-0">
+                Already have an account?
+                <a class="btn-link text-primary cursor-pointer" (click)="sign_in()">Log in</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

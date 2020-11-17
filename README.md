@@ -1,6 +1,6 @@
-# AngularUIAuthentication
+# Oxyy
 
-Simple basic authentication app designed in Angular 10. App design is based on Login/Register Design designed by [Harnish Design](https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page)
+Oxyy is a authentication KIT designed with Angular. App design is based on Login/Register. The UI has been design by [Harnish Design](https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page)
 
 ## Development server
 

@@ -1,0 +1,10 @@
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+.media-body {
+  flex: 1;
+}
+.media-list-divider .media:not(:first-child) {
+  border-top: 1px solid $list-group-border-color;
+}

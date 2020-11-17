@@ -1,0 +1,61 @@
+// stylelint-disable declaration-no-important
+
+// Contextual backgrounds
+
+@mixin bg-variant($selector, $color-obj) {
+    $color : map-get($color-obj, color);
+    .bg-#{$selector}, .hover-bg-#{$selector}:hover {
+        background-color: $color !important;
+    }
+    a.bg-#{$selector},
+    button.bg-#{$selector} {
+      @include hover-focus {
+        background-color: darken($color, 10%) !important;
+      }
+    }
+    @if map-get($color-obj, palette) {
+        .bg-#{$selector}-800 {
+            background-color: mix(black, $color, 30%) !important;
+        }
+        .bg-#{$selector}-700 {
+            background-color: mix(black, $color, 20%) !important;
+        }
+        .bg-#{$selector}-600 {
+            background-color: mix(black, $color, 10%) !important;
+        }
+        .bg-#{$selector}-400 {
+            background-color: mix(white, $color, 15%) !important;
+        }
+        .bg-#{$selector}-300 {
+            background-color: mix(white, $color, 30%) !important;
+        }
+        .bg-#{$selector}-200 {
+            background-color: mix(white, $color, 50%) !important;
+        }
+        .bg-#{$selector}-100 {
+            background-color: mix(white, $color, 70%) !important;
+        }
+        .bg-#{$selector}-50 {
+            background-color: mix(white, $color, 85%) !important;
+        }
+    }
+}
+
+@mixin bg-old-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+  a#{$parent},
+  button#{$parent} {
+    @include hover-focus {
+      background-color: darken($color, 10%) !important;
+    }
+  }
+}
+
+
+@mixin bg-gradient-variant($parent, $color) {
+  #{$parent} {
+    background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x !important;
+  }
+}

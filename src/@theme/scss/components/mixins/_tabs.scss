@@ -1,0 +1,34 @@
+
+
+@mixin nav-pill-variant($background, $color: #fff) {
+  @if ($color == null) { $color: #fff }
+	.nav-link.active {
+		background-color: $background;
+		color: $color;
+	}
+}
+
+@mixin line-tab-variant($color) {
+	.nav-link:hover, .nav-link.active {
+		color: $color;
+		border-bottom-color: $color;
+	}
+  &.line-tabs-solid {
+    .nav-link:hover, .nav-link.active {
+      background-color: mix(white, $color, 90%);
+    }
+  }
+}
+
+@mixin nav-tab-variant($color) {
+	.nav-link {
+		color: $color;
+	}
+  &.nav-top-border {
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      border-top-color: $color;
+    }
+  }
+}
+

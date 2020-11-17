@@ -1,0 +1,82 @@
+.pagination {
+  display: flex;
+  @include list-unstyled();
+}
+
+.page-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $pagination-height;
+  padding: 0 $pagination-padding-x;
+  margin: 0 3px;
+  color: $pagination-color;
+  background-color: $pagination-bg;
+  @include border-radius($pagination-border-radius);
+
+  &:hover {
+    z-index: 2;
+    color: $pagination-hover-color;
+    text-decoration: none;
+    background-color: $pagination-hover-bg;
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .page-link elements
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}
+
+.page-item {
+  &.active .page-link {
+    z-index: 1;
+    color: $pagination-active-color;
+    background-color: $pagination-active-bg;
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    pointer-events: none;
+    // Opinionated: remove the "hand" cursor set previously for .page-link
+    cursor: auto;
+    background-color: $pagination-disabled-bg;
+  }
+}
+
+
+// 
+// Circle style
+//
+
+.pagination-circle {
+  .page-link {
+    height: $pagination-height;
+    min-width: $pagination-height;
+    padding: 0 $pagination-circle-padding-x;
+    border-radius: 50%;
+  }
+  &.pagination-lg .page-link {
+    padding: 0 $pagination-circle-padding-x-lg;
+    height: $pagination-height-lg;
+    min-width: $pagination-height-lg;
+  }
+  &.pagination-sm .page-link {
+    padding: 0 $pagination-circle-padding-x-sm;
+    height: $pagination-height-sm;
+    min-width: $pagination-height-sm;
+  }
+}
+
+
+//
+// Sizing
+//
+
+.pagination-lg {
+  @include pagination-size($pagination-height-lg, $pagination-padding-x-lg, $font-size-lg);
+}
+
+.pagination-sm {
+  @include pagination-size($pagination-height-sm, $pagination-padding-x-sm, $font-size-sm);
+}

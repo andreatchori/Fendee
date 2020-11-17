@@ -1,0 +1,99 @@
+// SWITCHES
+
+.ui-switch {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+    input {
+        height: 0;
+        width: 0;
+        position: absolute;
+        opacity: 0;
+    }
+    span {
+        display: inline-block;
+        position: relative;
+        width: 55px;
+        height: 16px;
+        margin: 0 15px;
+        border-radius: 15px;
+        background-color: #ebedee;
+        border: 2px solid #ebedee;
+        cursor: pointer;
+        transition: all .1s ease;
+        &:after {
+            content: '';
+            height: 24px;
+            width: 24px;
+            line-height: 26px;
+            border-radius: 50%;
+            position: absolute;
+            left: 1px;
+            top: -6px;
+            color: #aaa;
+            transition: all .1s ease;
+            text-align: center;
+            font-size: 13px;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+        }
+    }
+    input:checked ~ span:after {
+        left: calc(100% - 25px);
+        background-color: $switch-default-bg;
+        color: #aaa;
+    }
+    /*&.switch-icon {
+        span:after {
+            content: "\f191";
+            content: "✕";
+        }
+        input:checked ~ span:after {
+            content: "\f17b";
+            content: "✓";
+        }
+    }*/
+    &.switch-outline, &.switch-solid, &.switch-lg, &.switch-square {
+        span {
+            height: 28px;
+            &:after {
+                top:0;
+            }
+        }
+    }
+    &.switch-solid {
+        input:checked ~ span {
+            background-color: $switch-default-bg;
+            border-color: $switch-default-bg;
+            &:after {background-color: $white}
+        }
+    }
+    &.switch-outline {
+        span {
+            background-color: #fff;
+        }
+    }
+    &.switch-square {
+        span {
+            border-radius: 2px;
+            &:after {border-radius: 2px}
+        }
+    }
+}
+
+
+//
+// Alternate switches
+//
+
+@each $color, $value in $switches-colors {
+  .switch-#{$color} {
+    @include switch-variant($value);
+  }
+}
+
+@each $color, $value in $switches-colors {
+  .switch-solid.switch-#{$color} {
+    @include switch-solid-variant($value);
+  }
+}

@@ -1,0 +1,235 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+  &.nav-top-border {
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      border-top: 3px solid theme-color('primary');
+    }
+  }
+  &.nav-tabs-lg .nav-link {
+      padding: .9rem 1.5rem;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
+.nav-tabs-icon {
+  vertical-align: middle;
+  margin-right: .6rem;
+  line-height: 0;
+  display: inline-block;
+}
+
+
+//
+// Alternate nav tabs
+//
+
+@each $color, $value in $nav-tabs-colors {
+  .nav-tabs-#{$color} {
+    @include nav-tab-variant($value);
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    color: $nav-tabs-link-color;
+    @include border-radius($nav-pills-border-radius);
+    transition: all ease-in-out .15s;
+    &:disabled, &.disabled {
+      color: $nav-tabs-disabled-color;
+    }
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+  &.nav-pills-rounded .nav-link {border-radius:50px}
+  &.nav-pills-links {
+    .nav-link.active,
+    .show > .nav-link {
+      background-color: transparent;
+      color: theme_color('primary');
+      font-weight: 600;
+    }
+  }
+  &.nav-pills-lg .nav-link {
+    padding: .7rem 1.5rem;
+    font-size: 16px;
+  }
+  &.nav-pills-solid {
+    .nav-link:not(.active) {
+      color: #212529;
+      background-color: #e3e3f2;
+    }
+  }
+}
+
+
+//
+// Alternate pill styles
+//
+
+@each $color, $value in $pill-colors {
+  .nav-pills-#{$color} {
+    @include nav-pill-variant($value);
+  }
+}
+
+
+//
+// Line Tabs
+// 
+
+.line-tabs {
+    &:not(.borderless) {
+      border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+      .nav-item {
+          margin-bottom: -$nav-tabs-border-width;
+      }
+    }
+    .nav-link {
+        padding: .9rem 1.5rem;
+        border: 0;
+        border-bottom: 1px solid transparent;
+        color: $nav-tabs-link-color; // #71808f;
+        transition: all .25s;
+        &:hover, &.active {
+            color: $nav-line-tabs-active-color;
+            border-color: $nav-line-tabs-active-color;
+        }
+        &:disabled, &.disabled {
+          color: $nav-tabs-disabled-color;
+          cursor: auto;
+          pointer-events: none;
+          &:hover, &.active {
+            border-color: transparent;
+            color: $nav-tabs-disabled-color;
+          }
+        }
+    }
+    &.line-tabs-2x .nav-link {
+        border-bottom-width: 2px;
+    }
+    &.line-tabs-lg .nav-link {
+        padding: 1.35rem 1.6rem;
+    }
+    &.line-tabs-solid {
+      .nav-link:hover, .nav-link.active {
+        background-color: mix(white, $nav-line-tabs-active-color, 90%);
+      }
+    }
+}
+
+
+//
+// Alternate line tabs
+//
+
+@each $color, $value in $nav-tabs-colors {
+  .line-tabs-#{$color} {
+    @include line-tab-variant($value);
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
