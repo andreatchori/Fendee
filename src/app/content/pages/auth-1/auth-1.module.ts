@@ -30,7 +30,8 @@ const routes = [
   ],
   declarations: [
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    ForgotpasswordComponent
   ]
 })
 export class Auth1Module { }

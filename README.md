@@ -1,6 +1,6 @@
-# Oxyy
+# Fendee
 
-Oxyy is a authentication KIT designed with Angular. App design is based on Login/Register. The UI has been design by [Harnish Design](https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page)
+Fendee is a authentication KIT designed with Angular. App design is based on Login/Register. The UI has been design by [Harnish Design](https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page)
 
 ## Development server
 
