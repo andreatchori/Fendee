@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SigninComponent } from './sign_in/sign_in.component';
 import { SignupComponent } from './sign_up/sign_up.component';
 import { ForgotpasswordComponent } from './forgot_password/forgot_password.component';
+import { OtpComponent } from './otp/otp.component';
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
     path: 'forgot-password',
     component: ForgotpasswordComponent
   },
+  {
+    path: 'otp',
+    component: OtpComponent
+  },
 ];
 
 @NgModule({
@@ -31,7 +36,8 @@ const routes = [
   declarations: [
     SigninComponent,
     SignupComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    OtpComponent
   ]
 })
 export class Auth1Module { }
