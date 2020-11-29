@@ -2,17 +2,29 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SignupComponent } from './sign_up/sign_up.component';
 import { SigninComponent } from './sign_in/sign_in.component';
+import { SignupComponent } from './sign_up/sign_up.component';
+import { ForgotpasswordComponent } from './forgot_password/forgot_password.component';
+import { OtpComponent } from './otp/otp.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SwalService } from 'src/app/core/services/swal.service';
 
 const routes = [
   {
-    path: 'sign_in',
+    path: 'sign-in',
     component: SigninComponent
   },
   {
-    path: 'sign_up',
+    path: 'sign-up',
     component: SignupComponent
+  },
+  {
+    path: 'forgot-password',
+    component: ForgotpasswordComponent
+  },
+  {
+    path: 'otp',
+    component: OtpComponent
   },
 ];
 
@@ -22,7 +34,16 @@ const routes = [
     RouterModule.forChild(routes),
     FormsModule,
     ReactiveFormsModule,
+    NgbModule
   ],
-  declarations: []
+  declarations: [
+    SigninComponent,
+    SignupComponent,
+    ForgotpasswordComponent,
+    OtpComponent
+  ],
+  providers: [
+    SwalService
+  ]
 })
-export class Auth1Module { }
+export class Auth2Module { }

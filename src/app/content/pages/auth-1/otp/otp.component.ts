@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SwalService } from 'src/app/core/services/swal.service';
 
 @Component({
   selector: 'app-otp',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class OtpComponent implements OnInit {
   otpForm: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(private formBuilder: FormBuilder, private router: Router, private swal: SwalService) {}
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
@@ -35,7 +36,7 @@ export class OtpComponent implements OnInit {
       return;
     }
     // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.otpForm.value, null, 4));
+    this.swal.successAlert( JSON.stringify(this.otpForm.value, null, 4));
   }
 
   // tslint:disable-next-line:typedef

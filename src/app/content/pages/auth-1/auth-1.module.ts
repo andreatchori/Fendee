@@ -6,6 +6,7 @@ import { SigninComponent } from './sign_in/sign_in.component';
 import { SignupComponent } from './sign_up/sign_up.component';
 import { ForgotpasswordComponent } from './forgot_password/forgot_password.component';
 import { OtpComponent } from './otp/otp.component';
+import { SwalService } from 'src/app/core/services/swal.service';
 
 const routes = [
   {
@@ -38,6 +39,9 @@ const routes = [
     SignupComponent,
     ForgotpasswordComponent,
     OtpComponent
+  ],
+  providers: [
+    SwalService
   ]
 })
 export class Auth1Module { }

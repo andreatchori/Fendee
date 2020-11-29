@@ -36,12 +36,12 @@ export class ForgotpasswordComponent implements OnInit {
       return;
     }
     // display form values on success
-    this.swal.successAlert( JSON.stringify(this.resetForm.value, null, 4));
+    this.swal.successAlert(JSON.stringify(this.resetForm.value, null, 4));
   }
 
   // tslint:disable-next-line:typedef
   sign_in() {
-    this.router.navigateByUrl('/auth1/sign-in');
+    this.router.navigateByUrl('/auth2/sign-in');
   }
 
 }

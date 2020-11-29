@@ -1,5 +1,5 @@
 {
-  "name": "oxyy",
+  "name": "fendee",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -16,12 +16,16 @@
     "@angular/compiler": "~11.0.0",
     "@angular/core": "~11.0.0",
     "@angular/forms": "~11.0.0",
+    "@angular/localize": "~11.0.0",
     "@angular/platform-browser": "~11.0.0",
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "@ngx-loading-bar/core": "^5.1.0",
+    "@sweetalert2/ngx-sweetalert2": "^8.1.1",
     "bootstrap": "^4.5.3",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^10.10.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

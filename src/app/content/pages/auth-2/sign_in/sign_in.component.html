@@ -1,1 +1,89 @@
-<h1>AUTH 1 SIGN IN</h1>
+<div class="fendee-login-register bg-dark">
+  <div class="container">
+    <div class="row no-gutters min-vh-100 py-5">
+      <div class="col-lg-7 shadow-lg">
+        <div class="hero-wrap d-flex align-items-center rounded-lg rounded-right-0 h-100">
+          <div class="hero-mask opacity-9 bg-primary"></div>
+          <div class="hero-bg hero-bg-scroll" style="background-image:url('./assets/images/bg.jpg');"></div>
+          <div class="hero-content mx-auto w-100 h-100 d-flex flex-column">
+            <div class="row no-gutters">
+              <div class="col-10 col-lg-10 mx-auto">
+                <div class="logo mt-5 mb-5 mb-lg-0"> <a title="Fendee"><img src="assets/images/logo-light.png" alt="Fendee"></a> </div>
+              </div>
+            </div>
+            <div class="row no-gutters my-auto">
+              <div class="col-10 col-lg-10 mx-auto">
+                <h1 class="text-11 text-white mb-3">Welcome back!</h1>
+                <p class="text-5 text-white line-height-4 mb-4">Get access to your Orders, Wishlist and Recommendations.</p>
+                <a class="btn btn-dark rounded-pill shadow-none video-btn py-1 px-3 d-inline-flex align-items-center mb-5 text-white">
+                  <span class="mr-2 text-7"><i class="fas fa-play-circle"></i></span>
+                  Watch demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 shadow-lg d-flex align-items-center rounded-lg rounded-left-0 bg-dark">
+        <div class="container my-auto py-5">
+          <div class="row">
+            <div class="col-11 col-lg-10 mx-auto">
+              <h3 class="text-white text-center mb-4">Sign In</h3>
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label class="text-light" for="emailAddress">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                   placeholder="Enter Your Email">
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="text-light" for="loginPassword">Password <span class="text-danger">*</span></label>
+                  <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                   placeholder="Enter Password">
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="custom-control custom-checkbox">
+                      <input name="remember" formControlName="rememberMe" class="form-check-input" type="checkbox">
+                      <label class="text-light" for="remember-me">
+                        &nbsp;
+                        Remember Me
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm text-right">
+                    <a class="btn-link text-primary cursor-pointer" (click)="forgot_password()">Forgot Password ?</a>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-block my-4">
+                  Login
+                </button>
+              </form>
+              <div class="d-flex align-items-center my-3">
+                <hr class="flex-grow-1 border-dark">
+                <span class="mx-2 text-2 text-muted">Or with Social Profile</span>
+                <hr class="flex-grow-1 border-dark">
+              </div>
+              <div class="d-flex  flex-column align-items-center mb-4">
+                <ul class="social-icons social-icons-circle">
+                  <li class="social-icons-facebook cursor-pointer"><a placement="top" ngbTooltip="Log In with Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="social-icons-twitter cursor-pointer"><a placement="top" ngbTooltip="Log In with Twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li class="social-icons-google cursor-pointer"><a placement="top" ngbTooltip="Log In with Google"><i class="fab fa-google"></i></a></li>
+                  <li class="social-icons-linkedin cursor-pointer"><a placement="top" ngbTooltip="Log In with Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+              <p class="text-2 text-center text-light mb-0">Don't have an account? <a class="btn-link text-primary cursor-pointer" (click)="sign_up()">Sign Up</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

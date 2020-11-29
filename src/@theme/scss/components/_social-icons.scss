@@ -1,0 +1,260 @@
+.fendee-login-register {
+	.social-icons {
+		margin: 0;
+		padding: 0;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		list-style: none;
+		li {
+			margin: 0px 6px 4px;
+			padding: 0;
+			overflow: visible;
+			a {
+				display: block;
+				height: 38px;
+				line-height: 38px;
+				width: 38px;
+				font-size: 18px;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.6);
+				color: #fff;
+				text-decoration: none;
+				-webkit-transition: all 0.2s ease;
+				transition: all 0.2s ease;
+			}
+			i {
+				line-height: inherit;
+			}
+			&:hover {
+				a {
+					opacity: 0.8;
+				}
+			}
+		}
+		li.social-icons-twitter {
+			a {
+				background-color: #00ACEE;
+			}
+		}
+		li.social-icons-facebook {
+			a {
+				background-color: #1874eb;
+			}
+		}
+		li.social-icons-linkedin {
+			a {
+				background-color: #0E76A8;
+			}
+		}
+		li.social-icons-google {
+			a {
+				background-color: #DB4437;
+			}
+		}
+		li.social-icons-instagram {
+			a {
+				background-color: #3F729B;
+			}
+		}
+		li.social-icons-vk {
+			a {
+				background-color: #2B587A;
+			}
+		}
+		li.social-icons-yahoo {
+			a {
+				background-color: #720E9E;
+			}
+		}
+		li.social-icons-apple {
+			a {
+				background-color: #000;
+			}
+		}
+		li.social-icons-windows {
+			a {
+				background-color: #0090f4;
+			}
+		}
+		li.social-icons-amazon {
+			a {
+				background-color: #f79400;
+			}
+		}
+	}
+	.social-icons.social-icons-lg {
+		li {
+			a {
+				height: 45px;
+				line-height: 45px;
+				width: 45px;
+			}
+		}
+	}
+	.social-icons.social-icons-rounded {
+		li {
+			a {
+				border-radius: .25rem;
+			}
+		}
+	}
+	.social-icons.social-icons-circle {
+		li {
+			a {
+				border-radius: 50%;
+			}
+		}
+	}
+	.btn-facebook {
+		background-color: #1874eb;
+		color: #fff !important;
+		&:hover {
+			background-color: #1266d2;
+		}
+	}
+	.btn-outline-facebook {
+		border-color: #1874eb;
+		color: #1874eb;
+		&:hover {
+			background-color: #1874eb;
+			color: #fff;
+		}
+	}
+	.btn-twitter {
+		background-color: #00ACEE;
+		color: #fff !important;
+		&:hover {
+			background-color: #0096cf;
+		}
+	}
+	.btn-outline-twitter {
+		border-color: #00ACEE;
+		color: #00ACEE;
+		&:hover {
+			background-color: #00ACEE;
+			color: #fff;
+		}
+	}
+	.btn-google {
+		background-color: #DB4437;
+		color: #fff !important;
+		&:hover {
+			background-color: #ce3325;
+		}
+	}
+	.btn-outline-google {
+		border-color: #DB4437;
+		color: #DB4437;
+		&:hover {
+			background-color: #DB4437;
+			color: #fff;
+		}
+	}
+	.btn-linkedin {
+		background-color: #0E76A8;
+		color: #fff !important;
+		&:hover {
+			background-color: #0c628c;
+		}
+	}
+	.btn-outline-linkedin {
+		border-color: #0E76A8;
+		color: #0E76A8;
+		&:hover {
+			background-color: #0E76A8;
+			color: #fff;
+		}
+	}
+	.btn-instagram {
+		background-color: #3F729B;
+		color: #fff !important;
+		&:hover {
+			background-color: #366285;
+		}
+	}
+	.btn-outline-instagram {
+		border-color: #3F729B;
+		color: #3F729B;
+		&:hover {
+			background-color: #3F729B;
+			color: #fff;
+		}
+	}
+	.btn-vk {
+		background-color: #2B587A;
+		color: #fff !important;
+		&:hover {
+			background-color: #234863;
+		}
+	}
+	.btn-outline-vk {
+		border-color: #2B587A;
+		color: #2B587A;
+		&:hover {
+			background-color: #2B587A;
+			color: #fff;
+		}
+	}
+	.btn-yahoo {
+		background-color: #720E9E;
+		color: #fff !important;
+		&:hover {
+			background-color: #5e0c82;
+		}
+	}
+	.btn-outline-yahoo {
+		border-color: #720E9E;
+		color: #720E9E;
+		&:hover {
+			background-color: #720E9E;
+			color: #fff;
+		}
+	}
+	.btn-apple {
+		background-color: #000;
+		color: #fff !important;
+		&:hover {
+			background-color: black;
+		}
+	}
+	.btn-outline-apple {
+		border-color: #000;
+		color: #000;
+		&:hover {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+	.btn-windows {
+		background-color: #0090f4;
+		color: #fff !important;
+		&:hover {
+			background-color: #007ed5;
+		}
+	}
+	.btn-outline-windows {
+		border-color: #0090f4;
+		color: #0090f4;
+		&:hover {
+			background-color: #0090f4;
+			color: #fff;
+		}
+	}
+	.btn-amazon {
+		background-color: #f79400;
+		color: #fff !important;
+		&:hover {
+			background-color: #d88200;
+		}
+	}
+	.btn-outline-amazon {
+		border-color: #f79400;
+		color: #f79400;
+		&:hover {
+			background-color: #f79400;
+			color: #fff;
+		}
+	}
+}

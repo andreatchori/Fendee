@@ -1,0 +1,47 @@
+.fendee-login-register {
+	.form-dark {
+		.form-control {
+			border-color: #232a31;
+			background: #232a31;
+			color: #fff;
+			&:focus {
+				border-color: #80bdff !important;
+			}
+			&::-webkit-input-placeholder {
+				color: #777b7f;
+			}
+			&:-moz-placeholder {
+				color: #777b7f;
+			}
+			&::-moz-placeholder {
+				color: #777b7f;
+			}
+			&:-ms-input-placeholder {
+				color: #777b7f;
+			}
+			&::-ms-input-placeholder {
+				color: #777b7f;
+			}
+		}
+		.custom-select {
+			border-color: #232a31;
+			background: #232a31;
+			color: #fff;
+			color: #777b7f;
+			background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='rgba(250,250,250,0.3)' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;background-size: 13px 15px;
+			border-color: #232a31;
+			background-color: #232a31;
+		}
+		.icon-group {
+			.icon-inside {
+				color: #777b7f;
+			}
+		}
+		.custom-control-label {
+			&:before {
+				background-color: #232a31;
+				border-color: #232a31;
+			}
+		}
+	}
+}

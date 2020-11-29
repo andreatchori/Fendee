@@ -1,46 +1,46 @@
-<div class="fendee-login-register">
-  <div class="container-fluid px-0">
-
-    <div class="row no-gutters min-vh-100">
-      <div class="col-md-6">
-        <div class="hero-wrap d-flex align-items-center h-100">
-          <div class="hero-mask opacity-7 bg-primary"></div>
-          <div class="hero-bg hero-bg-scroll"></div>
+<div class="fendee-login-register bg-dark">
+  <div class="container">
+    <div class="row no-gutters min-vh-100 py-5">
+      <div class="col-lg-7 shadow-lg">
+        <div class="hero-wrap d-flex align-items-center rounded-lg rounded-right-0 h-100">
+          <div class="hero-mask opacity-9 bg-primary"></div>
+          <div class="hero-bg hero-bg-scroll" style="background-image:url('./assets/images/bg.jpg');"></div>
           <div class="hero-content mx-auto w-100 h-100 d-flex flex-column">
             <div class="row no-gutters">
-              <div class="col-10 col-lg-9 mx-auto">
-                <div class="logo mt-5 mb-5 mb-md-0">
-                  <a class="d-flex" title="logo">
-                    <h2 class="text-white">
-                      <img src="assets/images/logo-light.png" alt="fendee">
-                    </h2>
+              <div class="col-10 col-lg-10 mx-auto">
+                <div class="logo mt-5 mb-5 mb-lg-0">
+                  <a title="Fendee">
+                    <img src="assets/images/logo-light.png" alt="Fendee">
                   </a>
                 </div>
               </div>
             </div>
             <div class="row no-gutters my-auto">
-              <div class="col-10 col-lg-9 mx-auto">
-                <h1 class="text-11 text-white mb-4">
-                  Welcome back!
+              <div class="col-10 col-lg-10 mx-auto">
+                <h1 class="text-11 text-white mb-3">
+                  Looks like you're new here!
                 </h1>
-                <p class="text-4 text-white line-height-4 mb-5">
-                  We are glad to see you again! Get access to your Orders, Wishlist and Recommendations.
+                <p class="text-5 text-white line-height-4 mb-4">
+                  Join our group in few minutes! Sign up with your details to get started
                 </p>
+                <a class="btn btn-dark rounded-pill shadow-none video-btn py-1 px-3 d-inline-flex align-items-center mb-5 text-white">
+                  <span class="mr-2 text-7"><i class="fas fa-play-circle"></i></span>
+                  Watch demo
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 d-flex align-items-center">
+      <div class="col-lg-5 shadow-lg d-flex align-items-center rounded-lg rounded-left-0 bg-dark">
         <div class="container my-auto py-5">
           <div class="row">
-            <div class="col-11 col-lg-9 col-xl-8 mx-auto">
-              <h3 class="font-weight-600 mb-4">Validate OTP</h3>
-              <p>
-                Please enter the OTP (one time password) to verify your account. A Code has been sent to <span class="text-dark">*******179</span>
-              </p>
-              <form [formGroup]="otpForm" (ngSubmit)="onSubmit()">
+            <div class="col-11 col-lg-10 mx-auto">
+              <h3 class="text-white text-center mb-4">Validate OTP</h3>
+              <p class="text-center"><img class="img-fluid" src="assets/images/otp-icon-light.png" alt="verification"></p>
+              <p class="text-white-50 text-center mb-4">Please enter the OTP (one time password) to verify your account. A Code has been sent to <span class="text-light">*******179</span></p>
+              <form class="form-dark" [formGroup]="otpForm" (ngSubmit)="onSubmit()">
                 <div class="form-row">
                   <div class="col form-group">
                     <input type="text"
@@ -68,13 +68,12 @@
                   </div>
                 </div>
                 <button class="btn btn-primary btn-block my-4" type="submit">Verify</button>
+                <p class="text-2 text-center text-light mb-0">Didn't get the code? <a class="btn-link text-primary">Resend it</a></p>
               </form>
-              <p class="text-center text-muted mb-0">Not received your code? <a class="btn-link text-primary">Resend code</a></p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
