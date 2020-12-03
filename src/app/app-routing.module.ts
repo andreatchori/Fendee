@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'auth2',
     loadChildren: () => import('./content/pages/auth-2/auth-2.module').then(m => m.Auth2Module)
   },
+  {
+    path: 'auth3',
+    loadChildren: () => import('./content/pages/auth-3/auth-3.module').then(m => m.Auth3Module)
+  },
 ];
 
 @NgModule({

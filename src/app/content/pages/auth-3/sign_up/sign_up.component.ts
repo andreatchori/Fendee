@@ -19,7 +19,7 @@ export class SignupComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       fullname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
       acceptTerms: [false, Validators.requiredTrue]
     }, {
@@ -43,12 +43,12 @@ export class SignupComponent implements OnInit {
       return;
     }
     // display form values on success
-    this.swal.successAlert( JSON.stringify(this.registerForm.value, null, 4));
+    this.swal.successAlert(JSON.stringify(this.registerForm.value, null, 4));
   }
 
   // tslint:disable-next-line:typedef
   sign_in() {
-    this.router.navigateByUrl('/auth1/sign-in');
+    this.router.navigateByUrl('/auth3/sign-in');
   }
 
 }
