@@ -4,19 +4,19 @@ import { Router } from '@angular/router';
 import { SwalService } from 'src/app/core/services/swal.service';
 
 @Component({
-  selector: 'app-otp',
-  templateUrl: './otp.component.html',
-  styleUrls: ['./otp.component.scss']
+  selector: 'app-forgot-password',
+  templateUrl: './forgot_password.component.html',
+  styleUrls: ['./forgot_password.component.scss']
 })
-export class OtpComponent implements OnInit {
-  otpForm: FormGroup;
+export class ForgotpasswordComponent implements OnInit {
+  resetForm: FormGroup;
   submitted = false;
   constructor(private formBuilder: FormBuilder, private router: Router, private swal: SwalService) {}
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-    this.otpForm = this.formBuilder.group({
-      code: ['', Validators.required]
+    this.resetForm = this.formBuilder.group({
+      resetField: ['', Validators.required]
     });
   }
 
@@ -26,22 +26,22 @@ export class OtpComponent implements OnInit {
 
   // convenience getter for easy access to form fields
   // tslint:disable-next-line:typedef
-  get f() { return this.otpForm.controls; }
+  get f() { return this.resetForm.controls; }
 
   // tslint:disable-next-line:typedef
   onSubmit() {
     this.submitted = true;
     // stop here if form is invalid
-    if (this.otpForm.invalid) {
+    if (this.resetForm.invalid) {
       return;
     }
     // display form values on success
-    this.swal.successAlert(JSON.stringify(this.otpForm.value, null, 4));
+    this.swal.successAlert(JSON.stringify(this.resetForm.value, null, 4));
   }
 
   // tslint:disable-next-line:typedef
-  resend_code() {
-    this.router.navigateByUrl('/auth3/sign-in');
+  sign_in() {
+    this.router.navigateByUrl('/auth4/sign-in');
   }
 
 }

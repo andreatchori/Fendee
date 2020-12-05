@@ -1,0 +1,60 @@
+<div class="fendee-login-register h-100 d-flex flex-column bg-transparent">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-md-9 col-lg-7 col-xl-5 mx-auto">
+        <div class="bg-white shadow-md rounded p-4 px-sm-5 mt-4">
+          <div class="logo">
+            <a class="d-flex justify-content-center" title="Fendee">
+              <img src="assets/images/logo-lg.png" alt="Fendee">
+            </a>
+          </div>
+          <hr class="mx-n4 mx-sm-n5">
+          <p class="lead text-center">Looks like you're new here! </p>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="fullname">Fullname <span class="text-danger">*</span></label>
+              <input type="text" formControlName="fullname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }"
+               placeholder="Enter Your Name">
+              <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+                <div *ngIf="f.fullname.errors.required">Fullname is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="emailAddress">Email Address <span class="text-danger">*</span></label>
+              <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+               placeholder="Enter Your Email">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="registerPassword">Password <span class="text-danger">*</span></label>
+              <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+               placeholder="Enter Password">
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password <span class="text-danger">*</span></label>
+              <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
+               placeholder="Enter confirm Password">
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.confirmPassword.errors.required">Confirm password is required</div>
+                <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block my-4">Sign Up</button>
+          </form>
+          <p class="text-center text-muted mb-2">
+            Already have an account?
+            <a class="btn-link text-primary" (click)="sign_in()">Log In</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid py-3">
+    <p class="text-center text-2 text-muted mb-0">Copyright © 2020 <a>Fendee</a>. All Rights Reserved.</p>
+  </div>
+</div>

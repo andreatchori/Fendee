@@ -67,9 +67,10 @@
                     class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
                   </div>
                 </div>
-                <button class="btn btn-primary btn-block my-4" type="submit">Verify</button>
+                <button class="btn btn-primary btn-block my-4">Verify</button>
               </form>
-              <p class="text-center text-muted mb-0">Not received your code? <a class="btn-link text-primary">Resend code</a></p>
+              <p class="text-center text-muted mb-0">Not received your code?
+                <a class="btn-link text-primary" (click)="resend_code()">Resend code</a></p>
             </div>
           </div>
         </div>

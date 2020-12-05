@@ -41,7 +41,7 @@ export class OtpComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   resend_code() {
-    this.router.navigateByUrl('/auth1/sign-in');
+    this.router.navigateByUrl('/auth2/sign-in');
   }
 
 }
