@@ -10,31 +10,32 @@ import { SplashScreenService } from './core/services/splash-screen.service';
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'AngularUIAuthentication';
-  constructor(private _router: Router, private _splashScreenService: SplashScreenService
-    , private _loader: LoadingBarService) {
+  constructor(private router: Router, private splashScreenService: SplashScreenService
+    ,         private loader: LoadingBarService) {
   }
 
+  // tslint:disable-next-line:typedef
   ngOnInit()
   {
-      this._router.events.subscribe(event => {
+      this.router.events.subscribe(event => {
           if (event instanceof NavigationStart) {
               // set page progress bar loading to start on NavigationStart event router
-              this._loader.start();
+              this.loader.start();
           }
           if (event instanceof RouteConfigLoadStart) {
-              this._loader.increment(35);
+              this.loader.increment(35);
           }
           if (event instanceof RouteConfigLoadEnd) {
-              this._loader.increment(75);
+              this.loader.increment(75);
           }
           if (event instanceof NavigationEnd || event instanceof NavigationCancel) {
               // set page progress bar loading to end on NavigationEnd event router
-              this._loader.complete();
+              this.loader.complete();
           }
       });
   }
 
   ngAfterViewInit(): void {
-    this._splashScreenService.init();
+    this.splashScreenService.init();
   }
 }

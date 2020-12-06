@@ -1,0 +1,100 @@
+<div class="fendee-login-register">
+  <div class="hero-wrap d-flex align-items-center h-100">
+    <div class="hero-mask opacity-4 bg-secondary"></div>
+    <div class="hero-bg hero-bg-scroll" style="background-image:url('assets/images/bg-4.jpeg');"></div>
+    <div class="hero-content mx-auto w-100 h-100">
+      <div class="container">
+        <div class="row no-gutters min-vh-100">
+          <!-- Welcome Text
+		  ========================= -->
+          <div class="col-md-6 d-flex flex-column">
+            <div class="row no-gutters my-auto">
+              <div class="col-10 col-lg-9 mx-auto text-center">
+                <div class="logo mt-5 mb-3"> <a title="Fendee"><img src="assets/images/logo-lg-light.png" alt="Fendee"></a> </div>
+                <h1 class="text-5 font-weight-400 text-white mb-5">
+                  We are glad to see you again!
+                </h1>
+                <p>
+                  <img src="images/qr-code.jpg" class="shadow-lg" alt="qr code">
+                </p>
+                <p class="text-white mb-0">Log In with QR Code</p>
+                <p class="text-light text-2 mx-lg-5">Scan this with your camera or our mobile app to login instantly.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Welcome Text End -->
+
+          <div class="col-md-6 d-flex align-items-center py-5">
+            <div class="container my-auto py-4 shadow-lg bg-white">
+              <div class="row">
+                <div class="col-11 col-lg-11 mx-auto">
+                  <h3 class="text-9 font-weight-600 text-center mt-2 mb-3">Sign In</h3>
+                  <p class="text-center mb-4">New to Fendee?
+                    <a class="btn-link text-primary" (click)="sign_up()"><u>Create an Account</u></a>
+                  </p>
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                      <label class="text-dark font-weight-600" for="emailAddress">Username or Email Address</label>
+                      <input type="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                      class="form-control rounded-0" placeholder="Enter Your Email">
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="text-dark font-weight-600" for="loginPassword">Password</label>
+                      <input type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                      formArrayName="password" class="form-control rounded-0" placeholder="Enter Password">
+                      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm">
+                        <div class="form-check custom-control custom-checkbox">
+                          <input name="remember" formControlName="rememberMe" class="form-check-input" type="checkbox">
+                          <label for="remember-me">Keep me signed in</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-dark btn-block rounded-0 my-4">Sign In</button>
+                  </form>
+                  <div class="d-flex align-items-center my-3">
+                    <hr class="flex-grow-1">
+                    <span class="mx-2 text-2 text-muted">Or sign in with</span>
+                    <hr class="flex-grow-1">
+                  </div>
+                  <div class="form-row mb-3">
+                    <div class="col-4">
+                      <button type="button" class="btn btn-outline-facebook btn-sm btn-block border-2 rounded-0 shadow-none">
+                        <span class="mr-2"><i class="fab fa-facebook-f"></i></span>
+                        Facebook
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-outline-google btn-sm btn-block border-2 rounded-0 shadow-none">
+                        <span class="mr-2"><i class="fab fa-google"></i></span>
+                        Google
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-outline-twitter btn-sm btn-block border-2 rounded-0 shadow-none">
+                        <span class="mr-2"><i class="fab fa-twitter"></i></span>
+                        Twitter
+                      </button>
+                    </div>
+                  </div>
+                  <p class="text-center">Need to find <a class="btn-link text-primary" (click)="forgot_password()"><u>your username</u></a>
+                    or <a class="btn-link text-primary" (click)="forgot_password()"><u>your password</u></a>?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
