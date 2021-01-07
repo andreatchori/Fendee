@@ -1,0 +1,55 @@
+<div class="fendee-login-register h-100 d-flex flex-column bg-transparent">
+  <div class="container my-auto">
+    <div class="row no-gutters h-100">
+      <div class="col-11 col-sm-9 col-md-7 col-lg-5 col-xl-4 m-auto py-5">
+        <div class="logo text-center mb-2">
+          <a title="Fendee">
+            <img src="assets/images/logo-light.png" alt="Fendee">
+          </a>
+        </div>
+        <h4 class="mb-4 mt-3 text-center">Two-Step Verification</h4>
+        <p class="text-center">
+          <img class="img-fluid" src="assets/images/otp-icon-dark.png" alt="verification">
+        </p>
+        <p class="text-muted mb-4 text-center">Enter the verification code we sent to <br>
+          <span class="text-dark text-4 text-center">+1*******179</span>
+        </p>
+        <form [formGroup]="otpForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="col form-group">
+              <input type="text"
+              formControlName="code"
+              [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
+              class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
+            </div>
+            <div class="col form-group">
+              <input type="text"
+              formControlName="code"
+              [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
+              class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
+            </div>
+            <div class="col form-group">
+              <input type="text"
+              formControlName="code"
+              [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
+              class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
+            </div>
+            <div class="col form-group">
+              <input type="text"
+              formControlName="code"
+              [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
+              class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block shadow-none my-3">Verify</button>
+        </form>
+        <p class="text-muted text-2 text-center">Didn't get the code?
+          <a class="btn-link text-primary cursor-pointer" (click)="resend_code()">Resend it</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-white py-2">
+    <p class="text-center text-2 text-muted mb-0">Copyright © 2020 <a class="text-primary">Fendee</a>. All Rights Reserved.</p>
+  </div>
+</div>

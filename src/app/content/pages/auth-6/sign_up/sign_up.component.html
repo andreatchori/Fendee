@@ -1,0 +1,50 @@
+<div class="fendee-login-register h-100 d-flex flex-column bg-transparent">
+  <div class="container my-auto">
+    <div class="row no-gutters h-100">
+      <div class="col-11 col-sm-9 col-md-7 col-lg-5 col-xl-4 m-auto py-5">
+        <div class="logo text-center mb-2">
+          <a title="Fendee">
+            <img src="assets/images/logo-light.png" alt="Fendee">
+          </a>
+        </div>
+        <p class="lead text-center mb-3">Looks like you're new here!</p>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="vertical-input-group">
+            <div class="input-group">
+              <input type="text" formControlName="fullname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }"
+              placeholder="Enter Your Name">
+            </div>
+            <div class="input-group">
+              <input type="email" formControlName="email" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+              placeholder="Email or Username">
+            </div>
+            <div class="input-group">
+              <input type="password" formControlName="password" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+              placeholder="Password">
+            </div>
+            <div class="input-group">
+              <input type="password" formControlName="confirmPassword" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
+              placeholder="Enter confirm Password">
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block shadow-none my-4">Create Account</button>
+        </form>
+        <p class="text-center text-muted mb-3">
+          Already have an account?
+          <a class="btn-link text-primary cursor-pointer" (click)="sign_in()">Log In</a>
+        </p>
+        <p class="text-center text-muted text-1 mb-0">
+          By creating an account, you agree to Fendee
+          <a class="btn-link cursor-pointer text-primary">Terms of use</a> and
+          <a class="btn-link cursor-pointer text-primary">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-white py-2">
+    <p class="text-center text-2 text-muted mb-0">Copyright © 2020 <a class="text-primary">Fendee</a>. All Rights Reserved.</p>
+  </div>
+</div>

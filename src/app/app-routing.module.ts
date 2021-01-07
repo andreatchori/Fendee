@@ -25,6 +25,10 @@ const routes: Routes = [
     path: 'auth5',
     loadChildren: () => import('./content/pages/auth-5/auth-5.module').then(m => m.Auth5Module)
   },
+  {
+    path: 'auth6',
+    loadChildren: () => import('./content/pages/auth-6/auth-6.module').then(m => m.Auth6Module)
+  },
 ];
 
 @NgModule({
