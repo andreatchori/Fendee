@@ -1,0 +1,98 @@
+<div class="fendee-login-register">
+  <div class="container-fluid px-0">
+    <div class="row no-gutters min-vh-100">
+      <div class="col-md-6 d-flex flex-column align-items-center order-2 order-md-1">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-11 col-md-10 mx-auto">
+              <p class="text-right text-2 text-muted font-weight-300">Not a member?
+                <a class="btn-link font-weight-300 cursor-pointer" (click)="sign_up()">Sign up now</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="container my-auto py-5">
+          <div class="row">
+            <div class="col-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+              <h3 class="font-weight-300 text-9 mb-5">Sign in</h3>
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group font-weight-300">
+                  <label for="emailAddress">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" formControlName="email" class="form-control border-light"
+                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                  placeholder="Enter Your Email">
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                  </div>
+                </div>
+                <div class="form-group font-weight-300">
+                  <label for="loginPassword">Password <span class="text-danger">*</span>  </label>
+                  <input type="password" formControlName="password" class="form-control border-light"
+                  [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                  placeholder="Enter Password">
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                  </div>
+                </div>
+                <div class="row text-2 mt-4">
+                  <div class="col-sm">
+                    <div class="custom-control custom-checkbox">
+                      <input name="rememberMe" formControlName="rememberMe"
+                      class="form-check-input" type="checkbox">
+                      <label for="rememberMe">Remember me</label>
+                    </div>
+                  </div>
+                  <div class="col-sm text-right">
+                    <a class="btn-link font-weight-300 cursor-pointer text-primary" (click)="forgot_password()">
+                      Forgot Password ?
+                    </a>
+                  </div>
+                </div>
+                <button class="btn btn-dark btn-block shadow-none font-weight-400 my-4">
+                  Sign in
+                </button>
+              </form>
+              <div class="d-flex align-items-center my-4">
+                <hr class="flex-grow-1">
+                <span class="mx-2 text-2 text-muted font-weight-300">Or continue with</span>
+                <hr class="flex-grow-1">
+              </div>
+              <div class="form-row mb-3">
+                <div class="col-6">
+                  <button type="button" class="btn btn-light btn-sm btn-block font-weight-400 shadow-none border">
+                    <span class="mr-2"><i class="fab fa-google"></i></span>
+                    Google
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-light btn-sm btn-block font-weight-400 shadow-none border">
+                    <span class="mr-2"><i class="fab fa-facebook-f"></i></span>
+                    Facebook
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 bg-light  order-1 order-md-2">
+        <div class="container h-100 d-flex flex-column">
+          <div class="row no-gutters">
+            <div class="col-11 col-md-10 mx-auto">
+              <div class="logo mt-5 mb-5 mb-md-0">
+                <a class="d-flex" title="fendee">
+                  <img src="images/logo.png" alt="fendee">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters my-auto">
+            <div class="col-11 col-md-10 mx-auto">
+              <h1 class="text-13 font-weight-300 mb-4">Join the largest Designer community in the world.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

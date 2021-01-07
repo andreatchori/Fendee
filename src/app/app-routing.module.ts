@@ -29,6 +29,14 @@ const routes: Routes = [
     path: 'auth6',
     loadChildren: () => import('./content/pages/auth-6/auth-6.module').then(m => m.Auth6Module)
   },
+  {
+    path: 'auth7',
+    loadChildren: () => import('./content/pages/auth-7/auth-7.module').then(m => m.Auth7Module)
+  },
+  {
+    path: 'auth8',
+    loadChildren: () => import('./content/pages/auth-8/auth-8.module').then(m => m.Auth8Module)
+  }
 ];
 
 @NgModule({

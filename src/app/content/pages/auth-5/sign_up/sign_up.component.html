@@ -27,7 +27,7 @@
                 <div class="col-11 col-lg-11 mx-auto">
                   <h3 class="text-9 font-weight-600 text-center mt-2 mb-3">Create an Account</h3>
                   <p class="text-center mb-4">Already have an account?
-                    <a class="btn-link text-primary cursor-pointer" (click)="sign_in()"><u>Sign in</u></a>
+                    <a class="btn-link text-primary cursor-pointer" ><u>Sign in</u></a>
                   </p>
                   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
@@ -48,7 +48,7 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="text-dark font-weight-600" for="loginPassword">Password</label>
+                      <label class="text-dark font-weight-600" for="loginPassword">Confirm Password</label>
                       <input type="password" formControlName="confirmPassword" class="form-control rounded-0"
                       [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
                       placeholder="Enter confirm Password">
