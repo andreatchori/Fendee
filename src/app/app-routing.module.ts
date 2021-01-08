@@ -36,6 +36,10 @@ const routes: Routes = [
   {
     path: 'auth8',
     loadChildren: () => import('./content/pages/auth-8/auth-8.module').then(m => m.Auth8Module)
+  },
+  {
+    path: 'auth9',
+    loadChildren: () => import('./content/pages/auth-9/auth-9.module').then(m => m.Auth9Module)
   }
 ];
 

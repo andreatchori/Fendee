@@ -1,0 +1,98 @@
+<div class="fendee-login-register">
+  <div class="hero-wrap min-vh-100">
+    <div class="hero-mask opacity-4 bg-secondary"></div>
+    <div class="hero-bg hero-bg-scroll" style="background-image:url('assets/images/bg-6.jpg');"></div>
+    <div class="hero-content d-flex min-vh-100">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-md-9 col-lg-7 col-xl-5 mx-auto">
+            <div class="hero-wrap rounded shadow-lg p-4 py-sm-5 px-sm-5 my-4">
+              <div class="hero-mask opacity-9 bg-dark"></div>
+              <div class="hero-content">
+                <div class="logo mb-4">
+                  <a class="d-flex justify-content-center" title="fendee">
+                    <img src="images/logo-lg-light.png" alt="fendee"></a>
+                  </div>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-dark">
+                  <div class="form-group icon-group">
+                    <input type="email" class="form-control" formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                    placeholder="Email Address">
+                    <span class="icon-inside">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">Email is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group icon-group">
+                    <input type="password" formControlName="password" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                    placeholder="Password">
+                    <span class="icon-inside">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">Password is required</div>
+                      <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                  </div>
+                  <button class="btn bg-danger-red text-light btn-block shadow-none mt-4 mb-3">Sign In</button>
+                  <div class="row text-2 mt-4">
+                    <div class="col-sm">
+                      <div class="form-check custom-control">
+                        <input name="remember" class="form-check-input" type="checkbox">
+                        <label for="remember-me" class="text-light mt-3">
+                          &nbsp;
+                          Remember Me
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm text-right">
+                      <a class="btn-link text-light cursor-pointer" (click)="forgot_password()">
+                        Forgot Password ?
+                      </a>
+                    </div>
+                  </div>
+                </form>
+                <div class="d-flex align-items-center mt-2 mb-3">
+                  <hr class="flex-grow-1 border-dark">
+                  <span class="mx-2 text-muted text-2">Or Login with</span>
+                  <hr class="flex-grow-1 border-dark">
+                </div>
+                <div class="d-flex  flex-column align-items-center mb-3">
+                  <ul class="social-icons social-icons-rounded">
+                    <li class="social-icons-facebook">
+                      <a class="cursor-pointer" placement="top" ngbTooltip="Login with Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons-twitter">
+                      <a class="cursor-pointer" placement="top" ngbTooltip="Login with Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons-google">
+                      <a class="cursor-pointer" placement="top" ngbTooltip="Login with Google">
+                        <i class="fab fa-google"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons-linkedin">
+                      <a class="cursor-pointer" placement="top" ngbTooltip="Login with Linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <p class="text-2 text-muted text-center mb-0">
+                  New to fendee?
+                  <a class="btn-link text-light text-3 cursor-pointer" (click)="sign_up()">Sign up now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
