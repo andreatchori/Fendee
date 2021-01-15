@@ -1,85 +1,61 @@
 <div class="fendee-login-register">
-  <div class="container-fluid px-0">
-    <div class="row no-gutters min-vh-100">
-      <div class="col-md-5">
-        <div class="hero-wrap d-flex align-items-center h-100">
-          <div class="hero-mask opacity-3 bg-teal"></div>
-          <div class="hero-content mx-auto w-100 h-100">
-            <div class="container d-flex flex-column h-100">
-              <div class="row no-gutters">
-                <div class="col-11 col-lg-9 mx-auto">
-                  <div class="logo mt-5 mb-5 mb-md-0">
-                    <a class="d-flex" title="Fendee">
-                      <img src="images/logo-teal.png" alt="fendee">
-                    </a>
-                  </div>
+  <div class="hero-wrap min-vh-100">
+    <div class="hero-mask opacity-4 bg-secondary"></div>
+    <div class="hero-bg hero-bg-scroll" style="background-image:url('assets/images/bg-6.jpg');"></div>
+    <div class="hero-content d-flex min-vh-100">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-md-9 col-lg-7 col-xl-5 mx-auto">
+            <div class="hero-wrap rounded shadow-lg p-4 py-sm-5 px-sm-5 my-4">
+              <div class="hero-mask opacity-9 bg-dark"></div>
+              <div class="hero-content">
+                <div class="logo mb-4">
+                  <a class="d-flex justify-content-center" title="fendee">
+                    <!-- Put your logo here -->
+                  </a>
                 </div>
+                <h4 class="text-white mb-4 text-center">Two-Step Verification</h4>
+                <p class="text-center">
+                  <img class="img-fluid" src="assets/images/otp-icon-light.png" alt="verification">
+                </p>
+                <p class="text-light mb-4 text-center">Enter the verification code we sent to <br>
+                  <span class="text-white text-center text-4">+1*******179</span></p>
+                <form [formGroup]="otpForm" (ngSubmit)="onSubmit()" class="form-dark">
+                  <div class="form-row">
+                    <div class="col form-group">
+                      <input type="text"
+                      formControlName="code"
+                      [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
+                      class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
+                    </div>
+                    <div class="col form-group">
+                      <input type="text"
+                      formControlName="code"
+                      [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
+                      class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
+                    </div>
+                    <div class="col form-group">
+                      <input type="text"
+                      formControlName="code"
+                      [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
+                      class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
+                    </div>
+                    <div class="col form-group">
+                      <input type="text"
+                      formControlName="code"
+                      [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
+                      class="form-control text-center text-6 py-2" maxlength="1" required autocomplete="off">
+                    </div>
+                  </div>
+                  <button class="btn bg-danger-red text-light btn-block shadow-none mt-4 mb-3">
+                    Verify
+                  </button>
+                </form>
+                <p class="text-muted text-center mb-0">
+                  Didn't get the code ?
+                  <a class="btn-link text-light text-3 cursor-pointer" (click)="resend_code()">Resend it</a>
+                </p>
               </div>
-              <div class="row no-gutters my-auto">
-                <div class="col-11 col-lg-9 mx-auto">
-                  <p class="text-4 line-height-4">We are glad to see you again!</p>
-                  <h1 class="text-9 font-weight-600 mb-5">Join the largest Designer community in the world.</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-7 d-flex flex-column align-items-center">
-        <div class="container my-auto py-5">
-          <div class="row">
-            <div class="col-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
-              <h3 class="font-weight-600 mb-4 text-center">
-                Two-Step Verification
-              </h3>
-              <p class="text-center">
-                <img class="img-fluid" src="assets/images/otp-icon-dark.png" alt="verification">
-              </p>
-              <p class="text-muted mb-4 text-center">
-                Please enter the OTP (one time password) to verify your account. A Code has been sent to
-                <span class="text-dark text-4">+225 *******</span>
-              </p>
-              <form [formGroup]="otpForm" (ngSubmit)="onSubmit()">
-                <label class="mb-3 font-weight-500 text-center">Enter 4 digit code</label>
-                <div class="form-row">
-                  <div class="col form-group">
-                    <input type="text"
-                    formControlName="code"
-                    [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
-                    class="form-control border-light text-center text-6 py-2" maxlength="1" required autocomplete="off">
-                  </div>
-                  <div class="col form-group">
-                    <input type="text"
-                    formControlName="code"
-                    [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
-                    class="form-control border-light text-center text-6 py-2" maxlength="1" required autocomplete="off">
-                  </div>
-                  <div class="col form-group">
-                    <input type="text"
-                    formControlName="code"
-                    [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
-                    class="form-control border-light text-center text-6 py-2" maxlength="1" required autocomplete="off">
-                  </div>
-                  <div class="col form-group">
-                    <input type="text"
-                    formControlName="code"
-                    [ngClass]="{ 'is-invalid': submitted && f.code.errors }"
-                    class="form-control border-light text-center text-6 py-2" maxlength="1" required autocomplete="off">
-                  </div>
-                </div>
-                <div class="form-row align-items-center">
-                  <div class="col">
-                    <button class="btn bg-teal text-light shadow-none my-2">
-                      Verify
-                    </button>
-                  </div>
-                  <div class="col">
-                    <p class="text-right text-2 mb-0">Didn't get the code?
-                      <a class="text-teal cursor-pointer" (click)="resend_code()">Resend it</a>
-                    </p>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>

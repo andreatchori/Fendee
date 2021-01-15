@@ -5,7 +5,7 @@
         <div class="bg-white shadow-md rounded p-4 px-sm-5 mt-4">
           <div class="logo">
             <a class="d-flex justify-content-center" title="Fendee">
-              <img alt="Fendee">
+              <h3 class="text-dark">Fendee</h3>
             </a>
           </div>
           <hr class="mx-n4 mx-sm-n5">
@@ -15,12 +15,19 @@
               <label for="emailAddress">Email Address <span class="text-danger">*</span></label>
               <input type="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
               class="form-control" placeholder="Enter Your Email">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+              </div>
             </div>
             <div class="form-group">
               <label for="loginPassword">Password <span class="text-danger">*</span></label>
               <input type="password" formControlName="password"
               [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
               class="form-control" placeholder="Enter Password">
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
             </div>
             <div class="row">
               <div class="col-sm">
@@ -33,7 +40,7 @@
                 </div>
               </div>
               <div class="col-sm text-right">
-                <a class="btn-link text-primary" (click)="forgot_password()"> Forgot Password ?</a>
+                <a class="btn-link text-primary cursor-pointer" (click)="forgot_password()"> Forgot Password ?</a>
               </div>
             </div>
             <button class="btn btn-primary btn-block my-4">Sign In</button>

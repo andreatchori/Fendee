@@ -8,7 +8,11 @@
           <div class="col-md-6 d-flex flex-column">
             <div class="row no-gutters my-auto">
               <div class="col-10 col-lg-9 mx-auto text-center">
-                <div class="logo mt-5 mb-3"> <a title="Fendee"><img src="assets/images/logo-lg-light.png" alt="Fendee"></a> </div>
+                <div class="logo mt-5 mb-3"> 
+                  <a title="Fendee">
+                    <img src="assets/images/qr-code.png" width="128" height="128" class="shadow-lg" alt="qr code">
+                  </a> 
+                </div>
                 <h1 class="text-5 font-weight-400 text-white mb-5">
                   Looks like you're new here!
                 </h1>
@@ -27,9 +31,17 @@
                 <div class="col-11 col-lg-11 mx-auto">
                   <h3 class="text-9 font-weight-600 text-center mt-2 mb-3">Create an Account</h3>
                   <p class="text-center mb-4">Already have an account?
-                    <a class="btn-link text-primary cursor-pointer" ><u>Sign in</u></a>
+                    <a class="btn-link text-primary cursor-pointer" (click)="sign_in()"><u>Sign in</u></a>
                   </p>
                   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                      <label class="text-dark font-weight-600" for="fullname">Fullname</label>
+                      <input type="text" formControlName="fullname" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }"
+                      class="form-control rounded-0" placeholder="Enter Your name">
+                      <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+                        <div *ngIf="f.fullname.errors.required">Fullname is required</div>
+                      </div>
+                    </div>
                     <div class="form-group">
                       <label class="text-dark font-weight-600" for="emailAddress">Email Address</label>
                       <input type="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"

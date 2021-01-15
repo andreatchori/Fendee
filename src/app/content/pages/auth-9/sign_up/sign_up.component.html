@@ -1,140 +1,113 @@
 <div class="fendee-login-register">
-  <div class="container-fluid px-0">
-    <div class="row no-gutters min-vh-100">
-      <div class="col-md-5">
-        <div class="hero-wrap d-flex align-items-center h-100">
-          <div class="hero-mask opacity-3 bg-teal"></div>
-          <div class="hero-content mx-auto w-100 h-100">
-            <div class="container d-flex flex-column h-100">
-              <div class="row no-gutters">
-                <div class="col-11 col-lg-9 mx-auto">
-                  <div class="logo mt-5 mb-5 mb-md-0">
-                    <a class="d-flex" title="fendee">
-                      <img src="images/logo-teal.png" alt="fendee">
-                    </a>
+  <div class="hero-wrap min-vh-100">
+    <div class="hero-mask opacity-4 bg-secondary"></div>
+    <div class="hero-bg hero-bg-scroll" style="background-image:url('assets/images/bg-6.jpg');"></div>
+    <div class="hero-content d-flex min-vh-100">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-md-9 col-lg-7 col-xl-5 mx-auto">
+            <div class="hero-wrap rounded shadow-lg p-4 py-sm-5 px-sm-5 my-4">
+              <div class="hero-mask opacity-9 bg-dark"></div>
+              <div class="hero-content">
+                <div class="logo mb-4">
+                  <a class="d-flex justify-content-center" title="fendee">
+                    <h3 class="text-white">Fendee</h3>
+                  </a>
                   </div>
-                </div>
-              </div>
-              <div class="row no-gutters my-auto">
-                <div class="col-11 col-lg-9 mx-auto">
-                  <p class="text-4 line-height-4">We are glad to see you again!</p>
-                  <h1 class="text-9 font-weight-600 mb-5">Join the largest Designer community in the world.</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-7 d-flex flex-column align-items-center">
-        <div class="container pt-5">
-          <div class="row">
-            <div class="col-11 col-md-11 mx-auto">
-              <p class="text-right text-2 mb-0">Already a member?
-                <a class="text-teal cursor-pointer" (click)="sign_in()">
-                  Sign in
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="container my-auto py-5">
-          <div class="row">
-            <div class="col-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
-              <h3 class="font-weight-600 mb-4">Sign up to Fendee</h3>
-              <div class="form-row mb-3">
-                <div class="col-4 col-sm-4 col-lg-6">
-                  <button type="button" class="btn btn-google btn-sm btn-block font-weight-400 shadow-none">
-                    <span class="mr-2">
-                      <i class="fab fa-google"></i>
-                    </span>
-                    <span class="d-none d-lg-inline">
-                      Sign up with Google
-                    </span>
-                  </button>
-                </div>
-                <div class="col-8 col-sm-8 col-lg-6">
-                  <div class="d-flex  flex-column">
-                    <ul class="social-icons social-icons-rounded">
-                      <li class="social-icons-facebook">
-                        <a class="cursor-pointer" placement="top" ngbTooltip="Sign up with Facebook">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li class="social-icons-twitter">
-                        <a class="cursor-pointer" placement="top" ngbTooltip="Sign up with Twitter">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li class="social-icons-linkedin">
-                        <a class="cursor-pointer" placement="top" ngbTooltip="Sign up with Linkedin">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li class="social-icons-apple">
-                        <a class="cursor-pointer" placement="top" ngbTooltip="Sign up with Apple">
-                          <i class="fab fa-apple"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex align-items-center my-4">
-                <hr class="flex-grow-1">
-                <span class="mx-3 text-2 text-muted">Or with Email</span>
-                <hr class="flex-grow-1">
-              </div>
-              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                <div class="form-group font-weight-500">
-                  <label for="fullname">Fullname <span class="text-danger">*</span></label>
-                  <input type="text" formControlName="fullname" class="form-control border-light"
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-dark">
+                  <div class="form-group icon-group">
+                    <input type="text" class="form-control" formControlName="fullname"
                     [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }"
-                    placeholder="Enter Your Fullname">
+                    placeholder="Fullname">
+                    <span class="icon-inside">
+                      <i class="fas fa-user"></i>
+                    </span>
                     <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
                       <div *ngIf="f.fullname.errors.required">Fullname is required</div>
                     </div>
-                </div>
-                <div class="form-group font-weight-500">
-                  <label for="emailAddress">Email Address <span class="text-danger">*</span></label>
-                  <input type="email" formControlName="email" class="form-control border-light"
+                  </div>
+                  <div class="form-group icon-group">
+                    <input type="email" class="form-control" formControlName="email"
                     [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
-                    placeholder="Enter Your Email">
+                    placeholder="Email Address">
+                    <span class="icon-inside">
+                      <i class="fas fa-envelope"></i>
+                    </span>
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                       <div *ngIf="f.email.errors.required">Email is required</div>
                     </div>
-                </div>
-                <div class="form-group font-weight-500">
-                  <label for="loginPassword">Password <span class="text-danger">*</span></label>
-                  <input type="password" formControlName="password" class="form-control border-light"
+                  </div>
+                  <div class="form-group icon-group">
+                    <input type="password" formControlName="password" class="form-control"
                     [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
-                    placeholder="Enter Password">
+                    placeholder="Password">
+                    <span class="icon-inside">
+                      <i class="fas fa-lock"></i>
+                    </span>
                     <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                       <div *ngIf="f.password.errors.required">Password is required</div>
+                      <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
                     </div>
-                </div>
-                <div class="form-group font-weight-500">
-                  <label for="confirmPassword">Confirm password <span class="text-danger">*</span></label>
-                  <input type="password" formControlName="confirmPassword" class="form-control border-light"
-                    [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
-                    placeholder="Enter Password">
-                    <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
-                      <div *ngIf="f.confirmPassword.errors.required">Confirm password is required</div>
-                      <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
-                    </div>
-                </div>
-                <div class="form-group mt-4">
-                  <div class="custom-control custom-checkbox">
-                    <input name="acceptTerms" formControlName="acceptTerms"
-                    [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }"
-                    class="form-check-input" type="checkbox">
-                    <label for="agree">I agree to the <a class="text-teal">Terms</a> and <a class="text-teal">Privacy Policy</a>.</label>
-                    <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
                   </div>
+                  <div class="form-group icon-group">
+                    <input type="password" formControlName="confirmPassword" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
+                    placeholder="Confirm password">
+                    <span class="icon-inside">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                      <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                      <div *ngIf="f.confirmPassword.errors.minlength">Confirm Password must be at least 6 characters</div>
+                    </div>
+                  </div>
+                  <button class="btn bg-danger-red text-light btn-block shadow-none mt-4 mb-3">Sign Up</button>
+                  <div class="row text-2 mt-4">
+                    <div class="col-sm">
+                      <div class="custom-control custom-checkbox">
+                        <input name="acceptTerms" formControlName="acceptTerms"
+                        [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }"
+                        class="form-check-input" type="checkbox">
+                        <label for="agree" class="text-light">I agree to the <a class="text-primary">Terms</a> and <a class="text-primary">Privacy Policy</a>.</label>
+                        <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="d-flex align-items-center mt-2 mb-3">
+                  <hr class="flex-grow-1 border-dark">
+                  <span class="mx-2 text-muted text-2">Or Sign up with</span>
+                  <hr class="flex-grow-1 border-dark">
                 </div>
-                <button class="btn bg-teal text-white shadow-none my-2">
-                  Sign up
-                </button>
-              </form>
+                <div class="d-flex  flex-column align-items-center mb-3">
+                  <ul class="social-icons social-icons-rounded">
+                    <li class="social-icons-facebook">
+                      <a class="cursor-pointer" placement="top" ngbTooltip="Sign up with Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons-twitter">
+                      <a class="cursor-pointer" placement="top" ngbTooltip="Sign up with Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons-google">
+                      <a class="cursor-pointer" placement="top" ngbTooltip="Sign up with Google">
+                        <i class="fab fa-google"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons-linkedin">
+                      <a class="cursor-pointer" placement="top" ngbTooltip="Sign up with Linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <p class="text-2 text-muted text-center mb-0">
+                  Already have an account?
+                  <a class="btn-link text-light text-3 cursor-pointer" (click)="sign_in()">Sign in now</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

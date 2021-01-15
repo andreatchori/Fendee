@@ -11,7 +11,8 @@
               <div class="hero-content">
                 <div class="logo mb-4">
                   <a class="d-flex justify-content-center" title="fendee">
-                    <img src="images/logo-lg-light.png" alt="fendee"></a>
+                    <h3 class="text-white">Fendee</h3>
+                  </a>
                   </div>
                 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-dark">
                   <div class="form-group icon-group">
@@ -41,8 +42,8 @@
                   <div class="row text-2 mt-4">
                     <div class="col-sm">
                       <div class="form-check custom-control">
-                        <input name="remember" class="form-check-input" type="checkbox">
-                        <label for="remember-me" class="text-light mt-3">
+                        <input name="remember" formControlName="rememberMe" class="form-check-input" type="checkbox">
+                        <label for="remember-me" class="text-light">
                           &nbsp;
                           Remember Me
                         </label>
@@ -86,7 +87,9 @@
                 </div>
                 <p class="text-2 text-muted text-center mb-0">
                   New to fendee?
-                  <a class="btn-link text-light text-3 cursor-pointer" (click)="sign_up()">Sign up now</a>
+                  <a class="btn-link text-light text-3 cursor-pointer" (click)="sign_up()">
+                    Sign up now
+                  </a>
                 </p>
               </div>
             </div>
