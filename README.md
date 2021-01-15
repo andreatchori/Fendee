@@ -1,27 +1,64 @@
-# Fendee
+<p align="center">
+  <a href="https://fendee.github.io">
+    <img src="/src/assets/images/logo-fendee.png" alt="Fendee" height="128">
+  </a>
+</p>
 
-Fendee is a authentication KIT designed with Angular. App design is based on Login/Register. The UI has been design by [Harnish Design](https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page)
+<p align="center">
+    <b>Fendee</b> is a authentication KIT designed with Angular. App design is based on Login/Register. The UI has been design by <b><a target="_blank" href="https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page">[Harnish Design]</a></b>
+</p>
+
+<p align="center">
+  <a href="https://fendee.github.io">
+    <img src="/src/assets/images/screenshot/auth_5.png" width="562"><br>
+    See Fendee in action ↗
+  </a>
+</p>
+
+## Vue version
+
+Coming soon
+
+## React Version
+
+Coming soon
+
+Browser compatibility
+---------------------
+
+ IE11* | Edge | Chrome | Firefox | Safari | Opera | UC Browser
+-------|------|--------|---------|--------|-------|------------
+:heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+
+## Project Structure
+
+    ├── ...
+    ├── pages                   # This directory contains all the modules
+    │   ├── auth-1          
+    │   ├── auth-2         
+    │   └── ....                
+    └── ...
+
+## Installation
+
+Run `npm install` to install the dependencies.
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Contributing
+------------
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[![Maintainability](https://api.codeclimate.com/v1/badges/eba34bb80477933854d4/maintainability)](https://codeclimate.com/github/sweetalert2/sweetalert2/maintainability)
 
-## Build
+If you would like to contribute enhancements or fixes, please do the following:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Fork the `fendee` repository and clone it locally.
 
-## Running unit tests
+2. Make sure you have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) installed.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. When in the Fendee directory, run `npm install` or `yarn install` to install dependencies.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+4. To begin active development, run `npm start` or `yarn start`. This does several things for you.
