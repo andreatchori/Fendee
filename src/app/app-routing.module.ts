@@ -40,10 +40,6 @@ const routes: Routes = [
   {
     path: 'auth9',
     loadChildren: () => import('./content/pages/auth-9/auth-9.module').then(m => m.Auth9Module)
-  },
-  {
-    path: 'error',
-    loadChildren: () => import('./content/pages/error/error.module').then(m => m.ErrorModule)
   }
 ];
 

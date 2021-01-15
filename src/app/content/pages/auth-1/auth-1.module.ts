@@ -7,6 +7,7 @@ import { SignupComponent } from './sign_up/sign_up.component';
 import { ForgotpasswordComponent } from './forgot_password/forgot_password.component';
 import { OtpComponent } from './otp/otp.component';
 import { SwalService } from 'src/app/core/services/swal.service';
+import { ErrorComponent } from './error/errorcomponent';
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
     path: 'otp',
     component: OtpComponent
   },
+  {
+    path: '**',
+    component: ErrorComponent
+  },
 ];
 
 @NgModule({
@@ -38,7 +43,8 @@ const routes = [
     SigninComponent,
     SignupComponent,
     ForgotpasswordComponent,
-    OtpComponent
+    OtpComponent,
+    ErrorComponent
   ],
   providers: [
     SwalService

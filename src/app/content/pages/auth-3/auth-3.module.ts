@@ -8,6 +8,7 @@ import { ForgotpasswordComponent } from './forgot_password/forgot_password.compo
 import { OtpComponent } from './otp/otp.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SwalService } from 'src/app/core/services/swal.service';
+import { ErrorComponent } from './error/errorcomponent';
 
 const routes = [
   {
@@ -26,6 +27,10 @@ const routes = [
     path: 'otp',
     component: OtpComponent
   },
+  {
+    path: '**',
+    component: ErrorComponent
+  }
 ];
 
 @NgModule({
@@ -40,7 +45,8 @@ const routes = [
     SigninComponent,
     SignupComponent,
     ForgotpasswordComponent,
-    OtpComponent
+    OtpComponent,
+    ErrorComponent
   ],
   providers: [
     SwalService
