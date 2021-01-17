@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://fendee.github.io">
+  <a href="https://andreatchori.dev/fendee">
     <img src="/src/assets/images/logo-fendee.png" alt="Fendee" height="128">
   </a>
 </p>
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://fendee.github.io">
+  <a href="https://andreatchori.dev/fendee">
     <img src="/src/assets/images/screenshot/auth_5.png" width="562"><br>
     See Fendee in action ↗
   </a>
