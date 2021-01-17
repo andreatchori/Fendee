@@ -1,0 +1,239 @@
+/*
+Template Name: Dos
+Template URL: https://www.codesymbol.com/templates/dos/
+Version: 1.0
+Author: CodeSymbol
+Author URL: https://themeforest.net/user/codesymbol/
+*/
+
+
+
+/*
+================================================================
+================================================================
+    Background Colors
+================================================================
+================================================================
+*/
+
+    body,
+    .loader {
+        background-color: #CCC;
+    }
+
+    .page-contact .cover::before,
+    .portfolio .swiper-slide .img::before,
+    .text-slider {
+        background-color: #CCC;
+    }
+
+    ::selection,
+    ::-moz-selection {
+        background-color: #959595;
+    }
+
+
+    header > nav > ul > li li {
+        background-color: #bbb;
+    }
+
+    header > nav > ul > li ul:hover li::before,
+    header > nav > ul > li ul ul:hover li::before,
+    header > nav > ul > li ul ul ul:hover li::before,
+    .swiper-container .swiper-next .line,
+    .swiper-container .swiper-prev .line,
+    .swiper-container .swiper-next::before,
+    .swiper-container .swiper-prev::before,
+    .swiper-container .swiper-next::after,
+    .swiper-container .swiper-prev::after {
+        background-color: #828282;
+    }
+
+    .swiper-pagination-bullet {
+        background: #828282;
+    }
+
+    header > nav > ul > li li::before,
+    header .menu-icon span,
+    header > nav > ul > li ul li:hover::before,
+    header > nav > ul > li ul ul li:hover::before,
+    header > nav > ul > li ul ul ul li:hover::before,
+    .swiper-container .swiper-next:hover .line,
+    .swiper-container .swiper-prev:hover .line,
+    .swiper-container .swiper-next:hover::before,
+    .swiper-container .swiper-prev:hover::before, 
+    .swiper-container .swiper-next:hover::after,
+    .swiper-container .swiper-prev:hover::after,
+    .slider .swiper-container .swiper-next .line,
+    .slider .swiper-container .swiper-prev .line,
+    .slider .swiper-container .swiper-next::before,
+    .slider .swiper-container .swiper-prev::before, 
+    .slider .swiper-container .swiper-next::after,
+    .slider .swiper-container .swiper-prev::after,
+    .text-slider .content a::after {
+        background-color: #595959;
+    }
+
+    .swiper-pagination-bullet-active,
+    .swiper-pagination-bullet-active::before {
+        background: #000000;
+    }
+
+    .page-about .content .name::after,
+    .page-contact .cover::after,
+    .slider .swiper-slide h1:after,
+    .projects-grid h1::after,
+    .single-project h1::after {
+        background-color: #646464;
+    }
+
+
+    .swiper-pagination .pagination-line {
+        background-color: #313131;
+    }
+
+    .slider .swiper-slide .content::before,
+    .text-slider .slides li::before,
+    .projects-grid article .img::after,
+    header.mobile-tablet > nav,
+    .text-slider .content a .wrap::before {
+        background-color: #fff;
+    }
+
+    .slider .swiper-pagination .pagination-line,
+    .loader span::before {
+        background-color: #000;
+    }
+
+    .slider .swiper-pagination-bullet,
+    .slider .swiper-pagination-bullet-active,
+    .slider .swiper-pagination-bullet-active::before {
+        background: #000;
+    }
+
+
+    header.mobile-tablet > nav > ul,
+    header.mobile-tablet > nav > ul > li ul,
+    header.mobile-tablet > nav > ul > li ul ul,
+    header.mobile-tablet > nav > ul > li ul ul ul,
+    header.mobile-tablet > nav ul li,
+    header.mobile-tablet > nav > ul > li ul li,
+    header.mobile-tablet > nav > ul > li ul ul li,
+    header.mobile-tablet > nav > ul > li ul ul ul li {
+        background-color: transparent;
+    }
+/*
+================================================================
+================================================================
+    Font Colors
+================================================================
+================================================================
+*/
+
+    body {
+        color: #393939;
+    }
+
+
+    header > nav > ul:hover > li a,
+    header > nav > ul > li ul:hover li a,
+    header > nav > ul > li ul ul:hover li a,
+    header > nav > ul > li ul ul ul:hover li a,
+    footer .social-links:hover a,
+    .page-about .content .social-profiles ul:hover a,
+    .portfolio .swiper-slide .discover span {
+        color: #828282;
+    }
+
+    a,
+    h1, h2, h3, h4, h5, h6,
+    header > nav > ul > li:hover a,
+    header > nav > ul > li ul li:hover a,
+    header > nav > ul > li ul ul li:hover a,
+    header > nav > ul > li ul ul ul li:hover a,
+    header > nav > ul > li ul li.active a, 
+    header > nav > ul > li ul ul li.active a,
+    header > nav > ul > li ul ul ul li.active a,
+    footer .copyrights .text1,
+    footer .copyrights a,
+    footer .social-links,
+    footer .social-links a:hover,
+    .page-about .content .social-profiles ul a:hover,
+    .slider .swiper-slide .discover span,
+    header.mobile-tablet > nav > ul > li > a,
+    header.mobile-tablet > nav > ul > li li a,
+    header.mobile-tablet > nav > ul > li:hover a,
+    header.mobile-tablet > nav > ul > li ul li:hover a,
+    header.mobile-tablet > nav > ul > li ul ul li:hover a,
+    header.mobile-tablet > nav > ul > li ul ul ul li:hover a,
+    header.mobile-tablet > nav > ul:hover > li a,
+    header.mobile-tablet > nav > ul > li ul:hover li a,
+    header.mobile-tablet > nav > ul > li ul ul:hover li a,
+    header.mobile-tablet > nav > ul > li ul ul ul:hover li a {
+        color: #1c1c1c;
+    }
+
+    ::selection,
+    ::-moz-selection {
+        color: #ffffff;
+    }
+
+
+    form input::-webkit-input-placeholder,
+    form textarea::-webkit-input-placeholder,
+    form input::-moz-placeholder,
+    form textarea::-moz-placeholder,
+    form input:-ms-input-placeholder,
+    form textarea:-ms-input-placeholder {
+        color: #000000;
+        opacity: 1;
+    }
+
+
+    .page-contact .content form input[type=text],
+    .page-contact .content form input[type=email],
+    .page-contact .content form textarea,
+    .page-contact .content form input[type=submit],
+    .page-contact .content form input[type=submit]:hover,
+    .page-contact .content form input[type=submit]:focus {
+        color: #000000;
+    }
+
+
+/*
+================================================================
+================================================================
+    Border Colors
+================================================================
+================================================================
+*/
+
+    .page-about .content .social-profiles ul:hover a {
+        border-color: #828282;
+    }
+
+    .page-about .content .social-profiles ul a:hover,
+    .page-about .content .social-profiles a {
+        border-color: #515151;
+    }
+
+    .page-contact .content form input[type=text],
+    .page-contact .content form input[type=email],
+    .page-contact .content form textarea {
+        border-color: #2f2f2f;
+    }
+
+    .page-contact .content form input[type=submit] {
+        border-color: #757575;
+    }
+
+    .page-contact .content form input[type=text]:hover,
+    .page-contact .content form input[type=email]:hover,
+    .page-contact .content form textarea:hover,
+    .page-contact .content form input[type=text]:focus,
+    .page-contact .content form input[type=email]:focus,
+    .page-contact .content form textarea:focus,
+    .page-contact .content form input[type=submit]:hover,
+    .page-contact .content form input[type=submit]:focus {
+        border-color: #000000;
+    }
