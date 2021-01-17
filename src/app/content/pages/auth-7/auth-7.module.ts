@@ -26,11 +26,7 @@ const routes = [
   {
     path: 'otp',
     component: OtpComponent
-  },
-  {
-    path: '**',
-    component: ErrorComponent
-  },
+  }
 ];
 
 @NgModule({
