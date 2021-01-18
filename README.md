@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    <b>Fendee</b> is a authentication KIT designed with Angular. App design is based on Login/Register. The UI has been design by <b><a target="_blank" href="https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page">[Harnish Design]</a></b>
+    <b>Fendee</b> is a authentication KIT designed with Angular. This is a template that you can use for your next application (for yourself, your company, or any client). It is very easy to edit, extend and publish. App design is based on Login/Register. The UI has been design by <b><a target="_blank" href="https://www.behance.net/gallery/105703027/Login-%28sign-in%29-and-Register-%28sign-up%29-Form-Page">[Harnish Design]</a></b>
 </p>
 
 <p align="center">
